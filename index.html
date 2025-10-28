@@ -14,7 +14,6 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -30,23 +29,9 @@
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>celebration</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="gj_webapp/manifest.json">
 </head>
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
+  <script src="gj_webapp/flutter_bootstrap.js" async></script>
 </body>
 </html>
